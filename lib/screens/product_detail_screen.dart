@@ -109,7 +109,7 @@ class BodyScreen extends StatelessWidget {
                   switch (sizingInformation.deviceScreenType) {
                     case DeviceScreenType.mobile:
                       return SizedBox(
-                        height: 250,
+                        height: 200,
                         child: Row(
                           children: [
                             Expanded(
@@ -128,6 +128,14 @@ class BodyScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
+                                  Flexible(
+                                    child: Text(
+                                      productModel!.name!,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                  ),
                                   Row(
                                     children: [
                                       const Text("Quantite:"),
@@ -137,27 +145,15 @@ class BodyScreen extends StatelessWidget {
                                       )
                                     ],
                                   ),
-                                  standardVerticalSpace,
                                   Row(
                                     children: [
-                                      const Text("Prix d'achat:"),
-                                      const Spacer(),
-                                      Text(
-                                        '${productModel!.buyingPrice!} FCFA',
-                                      )
-                                    ],
-                                  ),
-                                  standardVerticalSpace,
-                                  Row(
-                                    children: [
-                                      const Text("Prix de vente:"),
+                                      const Text("Prix:"),
                                       const Spacer(),
                                       Text(
                                         '${productModel!.initialPrice!} FCFA',
                                       )
                                     ],
                                   ),
-                                  standardVerticalSpace,
                                   Row(
                                     children: [
                                       const Text("Poids:"),
@@ -206,7 +202,6 @@ class BodyScreen extends StatelessWidget {
                                       )
                                     ],
                                   ),
-                                  standardVerticalSpace,
                                   Row(
                                     children: [
                                       const Text("Prix d'achat:"),
@@ -216,7 +211,6 @@ class BodyScreen extends StatelessWidget {
                                       )
                                     ],
                                   ),
-                                  standardVerticalSpace,
                                   Row(
                                     children: [
                                       const Text("Prix de vente:"),
@@ -226,7 +220,6 @@ class BodyScreen extends StatelessWidget {
                                       )
                                     ],
                                   ),
-                                  standardVerticalSpace,
                                   Row(
                                     children: [
                                       const Text("Poids:"),
